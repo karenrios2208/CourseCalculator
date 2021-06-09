@@ -5,7 +5,6 @@
     <title>Log in</title>
     <link rel="stylesheet" href="../Resources/css/login.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-
 </head>
 
 <body>
@@ -16,7 +15,7 @@
             <input type="text" id="email" name="email" />
             <br />
             <p> Password: </p>
-            <input type="text" id="pwd" name="pwd" />
+            <input type="password" id="pwd" name="pwd" />
             <br />
             <br />
             <button type="submit" name="LOGIN">LOGIN</button>
@@ -43,7 +42,7 @@
                 }
                 else if (this.readyState == 4 && this.status == 505) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("error").innerHTML = 'Not empty field allowed';
+                    document.getElementById("error").innerHTML = 'No empty fields allowed';
                 }
             };
 

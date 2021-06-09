@@ -207,10 +207,16 @@ body{
 .home_content .text{
   font-size: 25px;
   font-weight: 500;
-  color: #1d1b31;
+  color: pink;
   margin: 12px;
 }
 .sidebar.active ~ .home_content{
   width: calc(100% - 240px);
   left: 240px;
 }
+
+.home_content .topbar{
+  background-color: #11101d;
+  height:200px;
+  width: 100%;
+} 
