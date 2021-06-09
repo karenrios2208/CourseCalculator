@@ -38,11 +38,11 @@
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("error").innerHTML = 'no aprobado';
+                    document.getElementById("error").innerHTML = 'Wrong email or password';
                 }
                 else if (this.readyState == 4 && this.status == 505) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("error").innerHTML = 'No vacios';
+                    document.getElementById("error").innerHTML = 'Not empty field allowed';
                 }
             };
 
