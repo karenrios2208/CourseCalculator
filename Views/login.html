@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html id="Security">
+<html>
 
-<head>
+<head id="Security">
     <title>Log in</title>
     <link rel="stylesheet" href="../resources/login.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
@@ -33,7 +33,7 @@
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //var karen = JSON.parse(this.responseText);
-                    <meta http-equiv="refresh" content="0; URL=mainPage.html" />;
+                    Document.getElementById("Security").innerHTML = '<meta http-equiv="refresh" content="0; URL=mainPage.html" />';
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);
