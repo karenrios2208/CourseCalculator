@@ -18,9 +18,9 @@ $db = $database->getConnection();
 $user = new User($db);
 
 
-if( $_POST['user'] != "" && $_POST['pwd'] != "" )
+if( $_POST['email'] != "" && $_POST['pwd'] != "" )
 {
-    $stmt = $user->searchLogin($_POST['user'], $_POST['pwd']);
+    $stmt = $user->searchLogin($_POST['email'], $_POST['pwd']);
     $numRows = $stmt->rowCount();
 
     if ($numRows > 0) 
