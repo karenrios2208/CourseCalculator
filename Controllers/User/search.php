@@ -54,4 +54,3 @@ if( $_POST['user'] != "" )
     }
 
 ?>
-<meta http-equiv="refresh" content="0; URL=mainPage.html" />;

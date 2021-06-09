@@ -35,7 +35,7 @@ include_once '../Models/user.php';
     
             $user_item=array(
                 "user" => $Username,
-                "fname" => $FullName,
+                "sp" => $StudyProgram,
                 "mail" => $Email,
                 "pwd" => $Password,
             );
