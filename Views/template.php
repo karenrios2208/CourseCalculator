@@ -55,7 +55,7 @@ session_start();
     </div>
   </div>
   <div class="home_content">
-    <div class="topbar" ></div>
+    <div class="topbar"></div>
     <div class="text">WELCOME <?php echo $_SESSION['name'] ?></div>
   </div>
 

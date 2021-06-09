@@ -207,7 +207,7 @@ body{
 .home_content .text{
   font-size: 25px;
   font-weight: 500;
-  color: pink;
+  color: #1d1b31;
   margin: 12px;
 }
 .sidebar.active ~ .home_content{
@@ -217,6 +217,6 @@ body{
 
 .home_content .topbar{
   background-color: #11101d;
-  height:200px;
+  height:50px;
   width: 100%;
 } 
