@@ -5,16 +5,14 @@ session_start();
 
 
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="../Resources/css/navbar.css">
-    <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title> 
+  </head>
 <body>
     
   <div class="sidebar">
@@ -57,6 +55,7 @@ session_start();
     </div>
   </div>
   <div class="home_content">
+    <div class="topbar"></div>
     <div class="text">WELCOME <?php echo $_SESSION['name'] ?></div>
   </div>
 
