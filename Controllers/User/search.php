@@ -20,7 +20,7 @@ $user = new User($db);
 
 if( $_POST['user'] != "" && $_POST['pwd'] != "" )
 {
-    $stmt = $user->search($_POST['user']);
+    $stmt = $user->searchLogin($_POST['user'], $_POST['pwd']);
     $numRows = $stmt->rowCount();
 
     if ($numRows > 0) 

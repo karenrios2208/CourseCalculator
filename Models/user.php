@@ -153,6 +153,22 @@ class User
 
         return $stmt;
     }
+
+    function searchLogin($keyword, $pass){
+        
+        $query = "SELECT
+                    u.Password, u.Email
+                FROM " . $this->table_name . " u
+                WHERE  u.Email='".$keyword."' and u.Password = '".$pass."'
+                ORDER BY 
+                    u.Name DESC;";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
     
 }
 ?>
