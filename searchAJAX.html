@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Search GET Practice</h1>
+        <h3>Search for user:</h3>
+        <form action="search.php" method="GET">
+            Username: <input type="text" id="kwd" name="kwd" onkeyup="showHint(this.value)">
+           <!-- <button type = "submit" name="SEARCH">SEARCH</button> -->
+        </form>
+        
+
+        <p>Suggestions: <span id="suggestions"></span></p>
+        
+         <script>
+            function showHint(str){
+                var xhttp;
+
+                if(str.length == 0){
+                    document.getElementById("suggestions").innerHTML = this.responseText;
+                    return;
+                }
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status ==200){
+                        var karen = JSON.parse(this.responseText);
+                        document.getElementById("suggestions").innerHTML = this.responseText;
+                    }
+                };
+
+            xhttp.open("GET", "searchAJ.php?kwd="+str, true);
+            xhttp.send();
+            }
+
+        </script> 
+        
+    </body>
+</html>

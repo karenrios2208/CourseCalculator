@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="../resources/login.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+
+</head>
+
+<body>
+    <h1>Register</h1>
+    <div>
+        <form action="../Controllers/User/create.php" method="POST">
+            <p> Email: </p>
+            <input type="text" id="mail" name="mail" />
+            <br />
+            <p> Username: </p>
+            <input type="text" id="user" name="user" />
+            <br />
+            <p> Study Program: </p>
+            <input type="text" id="sp" name="sp" />
+            <br />
+            <p> Password: </p>
+            <input type="text" id="pwd" name="pwd" onkeyup="showHint(this.value)" />
+            <br />
+            <span id="Security"></span>
+            <br />
+            <button type="submit" name="Register">REGISTER</button>
+
+        </form>
+    </div>
+    <script>
+        function showHint(str) {
+
+            if (str.length == 0) {
+                document.getElementById("Security").innerHTML = this.responseText;
+                return;
+            }
+
+            else if (str.length < 8) {
+
+                document.getElementById("Security").innerHTML = "<h2 class=\"weak\">weak Password</h2>";
+
+            }
+            else {
+
+                document.getElementById("Security").innerHTML = "<h2 class=\"safe\">Safe Password</h2>";
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
