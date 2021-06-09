@@ -1,3 +1,8 @@
+<?php
+// start a session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +13,7 @@
 </head>
 
 <body>
-    <h1>TEMPORAL MAIN</h1>
+    <h1>WELCOME <?php echo $_SESSION['name'] ?></h1>
 </body>
 
 </html>
