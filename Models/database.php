@@ -2,7 +2,7 @@
 class Database{
   
     // specify your own database credentials
-    private $host = "192.168.1.138";
+    private $host = "localhost";
     private $db_name = "coursecalculator";
     private $username = "webAdmin";
     private $password = "Queso1324";
