@@ -19,9 +19,10 @@
             <input type="text" id="pwd" name="pwd" />
             <br />
             <button type="submit" name="LOGIN">LOGIN</button>
-            <div id = "error"></div>
+            <p id = "error"></p>
         </form>
     </div>
+
     <script>
 
         var xhttp;
@@ -38,6 +39,10 @@
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);
                     document.getElementById("error").innerHTML = 'no aprobado';
+                }
+                else if (this.readyState == 4 && this.status == 505) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("error").innerHTML = 'No vacios';
                 }
             };
 

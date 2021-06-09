@@ -18,39 +18,26 @@ $db = $database->getConnection();
 $user = new User($db);
 
 
-
-
-if( $_POST['user'] != "" )
+if( $_POST['user'] != "" && $_POST['pwd'] != "" )
 {
     $stmt = $user->search($_POST['user']);
     $numRows = $stmt->rowCount();
 
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $user_rows = "";
-
     if ($numRows > 0) 
     {
-        foreach($rows as $item){
-            $user_rows .= "
-            \n <tr> 
-                            \t <td> $item[Name] </td>
-                            \t <td> $item[Password] </td>
-                            \t <td> $item[Email] </td>
-                            \t <td> $item[StudyProgram] </td>
-                    \n </tr>";
-    
-        }
+        http_response_code(200);
         
     }
     else{
+        //Error no encontrado
         http_response_code(404);
     }
 }
-    else{
-      
-        // set response code - 404 Not found
-        http_response_code(404);
-      
-    }
+else{
+    
+    // Error campos vacios
+    http_response_code(505);
+    
+}
 
 ?>
