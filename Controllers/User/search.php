@@ -26,6 +26,15 @@ if( $_POST['email'] != "" && $_POST['pwd'] != "" )
     if ($numRows > 0) 
     {
         http_response_code(200);
+        session_start();
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['pwd'] = $_POST['pwd'];
+
+        $stmt2 = $user->searchName($_POST['email']);
+        $value = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+        VAR_DUMP($value);
+        $_SESSION['name'] = $value[0]['Name'];
+
         
     }
     else{
