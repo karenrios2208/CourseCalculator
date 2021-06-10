@@ -27,17 +27,21 @@ var_dump($_POST);
 if( $_POST['user'] !=''){
     
     if($user->updateName($_POST['user'], $_POST['email'])){
+        
+        session_start();
+        $_SESSION['name'] = $_POST['user'];
+
         http_response_code(200);
     }
     else{
-        http_response_code(404);
+        http_response_code(404); //No se encontro usuario
     }
 
 }
 
 else{
     // set response code - 400 bad request
-    http_response_code(505);
+    http_response_code(505); //Datos vacios
 }
 
 ?>
