@@ -20,8 +20,8 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
-    <div class="text">WELCOME <?php echo $_SESSION['name'] ?></div>
-    <div class="text">Study plan: <?php echo $_SESSION['plan']?></div>
+    <div class="title">WELCOME <?php echo $_SESSION['name'] ?></div>
+    
   </div>
 
     <?php

@@ -23,6 +23,7 @@ session_start();
     ?>
 
     <div class="title"> Academic plan history </div>
+    <div class="subtitle">Study plan: <?php echo $_SESSION['plan']?></div>
     <div class="wrapper">
       <?php 
         $plan = $_SESSION['plan'];

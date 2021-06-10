@@ -213,25 +213,159 @@
     {
         "semester": 6,
         "subjects": [
-            
+            {
+                "nombre": "Economía para la creación de negocios",
+                "clave": "EC1010",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Métodos numéricos en ingeniería",
+                "clave": "M2025",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Bioquímica metabólica",
+                "clave": "Q2003",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Caracterización experimental de materiales y nanomateriales",
+                "clave": "Q2019",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de química analítica instrumental",
+                "clave": "Q3002",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Análisis espectroscópico",
+                "clave": "Q3005",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
         ]
     },
     {
         "semester": 7,
         "subjects": [
-            
+            {
+                "nombre": "Emprendimiento",
+                "clave": "EM1005",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Diseño y análisis de experimentos",
+                "clave": "IN2023",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Diseño y síntesis de macromoléculas",
+                "clave": "Q3016",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Estructura molecular y diseño computacional",
+                "clave": "Q3017",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio bioquímica analítica",
+                "clave": "Q3018",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de síntesis de materiales y nanomateriales",
+                "clave": "Q3024",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
         ]
     },
     {
         "semester": 8,
         "subjects": [
-            
+            {
+                "nombre": "Formulaciones nanotecnológicas para la industria",
+                "clave": "Q3025",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Proyecto de investigación en química y nanotecnología",
+                "clave": "Q3026",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de ingeniería macromolecular",
+                "clave": "Q3027",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química médica y nanomedicina",
+                "clave": "Q3028",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Tópicos I",
+                "clave": "VA2010",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Tópicos II",
+                "clave": "VA2011",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
         ]
     },
     {
         "semester": 9,
         "subjects": [
-            
+            {
+                "nombre": "Ética aplicada",
+                "clave": "HS2006",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Introducción a la vida profesional",
+                "clave": "Q3021",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Proyecto integrador en química y nanotecnología",
+                "clave": "Q3029",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Tópicos III",
+                "clave": "VA2012",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Tópicos IV",
+                "clave": "VA2013",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
         ]
     }
 ]

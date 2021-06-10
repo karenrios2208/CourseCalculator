@@ -225,6 +225,15 @@ body{
   color: #1d1b31;
   margin: 12px;
 }
+
+.home_content .subtitle{
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
+  text-align: center;
+}
+
 .sidebar.active ~ .home_content{
   width: calc(100% - 240px);
   left: 240px;
