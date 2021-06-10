@@ -8,9 +8,10 @@ session_start();
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Resources/css/navbar.css">
+    <link rel="stylesheet" href="../Resources/css/card.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Calculator - Home</title> 
+    <title>Subject</title> 
   </head>
 <body>
     <?php
@@ -20,13 +21,11 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
-    <div class="title">WELCOME <?php echo $_SESSION['name'] ?></div>
-    
+    <div class="title"> Course: </div>
+    <div class="creditCardForm">
+      
+    </div>
   </div>
-
-    <?php
-      require '../Resources/templates/sidebar-scripts.php';
-    ?>
-
+    
 </body>
 </html>

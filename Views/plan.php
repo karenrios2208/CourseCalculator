@@ -40,13 +40,13 @@ session_start();
           
           foreach($subjects as $mat)
           {
-            $name = $mat['nombre'];
             echo "<div class='course'> ";
+            echo "<a class='card_link' href='subject.php'";
             echo "<p class='courseName'> ";
             echo $mat['clave'];
             echo "<p class='courseName'> ";
-            echo $name;
-            echo "</p> </div>";
+            echo $mat['nombre'];
+            echo "</p> </a> </div> ";
           }
 
           echo "</div>";
