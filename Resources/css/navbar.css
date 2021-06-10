@@ -209,8 +209,18 @@ body{
 .sidebar.active ~ .home_content{
   z-index: 100;
 }
+
+.home_content .title{
+  font-size: 30px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
+  text-align: center;
+  margin-top:15px;
+}
+
 .home_content .text{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   color: #1d1b31;
   margin: 12px;

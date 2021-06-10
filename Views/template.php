@@ -22,10 +22,8 @@ session_start();
     ?>
     <div class="text">Title</div>
   </div>
-
     <?php
       require '../Resources/templates/sidebar-scripts.php';
     ?>
-
 </body>
 </html>

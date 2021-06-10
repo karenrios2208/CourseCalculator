@@ -22,13 +22,19 @@
             <input type="text" id="sp" name="sp" />
             <br />
             <p> Password: </p>
-            <input type="text" id="pwd" name="pwd" onkeyup="showHint(this.value)" />
+            <input type="password" id="pwd" name="pwd" onkeyup="showHint(this.value)" />
             <br />
             <span id="Security"></span>
             <br />
             <button type="submit" name="Register">REGISTER</button>
 
         </form>
+        <br />
+        <p class="text"> Already have an account? 
+            <a href="login.html">
+                Log In
+            </a> 
+        </p>
     </div>
     <script>
         function showHint(str) {
