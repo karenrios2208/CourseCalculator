@@ -56,3 +56,16 @@ button{
  p.error{
      color:red
  }
+
+ p.text{
+    font-size: 15px;
+    font-weight: normal;
+ }
+
+ a {
+     color: #5d59eb;
+ }
+
+ a:visited {
+    color:#5d59eb;
+}

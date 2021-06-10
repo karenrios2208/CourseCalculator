@@ -20,7 +20,7 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
-    <div class="text">WELCOME <?php echo $_SESSION['name'] ?></div>
+    <div class="title"> Academic plan history </div>
   </div>
 
     <?php
