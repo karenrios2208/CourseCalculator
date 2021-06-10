@@ -77,17 +77,17 @@ session_start();
               <tr>
                 <td><input type="text" name="nombre6" form="my_form" placeholder="Watch Loki" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje6" form="my_form" placeholder="0" style="width: 84px"></td>
-                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali6" form="my_form" placeholder="0" style="width: 84px"></td>
               </tr>
               <tr>
                 <td><input type="text" name="nombre7" form="my_form" placeholder="Procrastinate" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje7" form="my_form" placeholder="0" style="width: 84px"></td>
-                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali7" form="my_form" placeholder="0" style="width: 84px"></td>
               </tr>
               <tr>
                 <td><input type="text" name="nombre8" form="my_form" placeholder="Cry" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje8" form="my_form" placeholder="0" style="width: 84px"></td>
-                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali8" form="my_form" placeholder="0" style="width: 84px"></td>
               </tr>
 
           </table>
@@ -95,10 +95,9 @@ session_start();
           <!-- <button type="button" form="my_form">Calcular</button> -->
 
       </div>
-      <br/>
-      <br/>
+
       <div style="width:27%; text-align: center;">
-  
+
       <table id="requestContents" class = "styl">
               <colgroup>
                   <col style="width: 128px">
@@ -157,6 +156,7 @@ session_start();
         }
 
         let sum = (Number(porcentaje1) * .01 * Number(cali1)) + (Number(porcentaje2) * .01 * Number(cali2)) + (Number(porcentaje3) * .01 * Number(cali3)) + (Number(porcentaje4) * .01 * Number(cali4)) + (Number(porcentaje5) * .01 * Number(cali5)) + (Number(porcentaje6) * .01 * Number(cali6)) + (Number(porcentaje7) * .01 * Number(cali7)) + (Number(porcentaje8) * .01 * Number(cali8));
+        
         document.getElementsByName("sum")[0].value = sum;
     }
 </script>
