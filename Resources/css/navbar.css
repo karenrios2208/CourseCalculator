@@ -108,7 +108,7 @@ body{
 .sidebar ul li:hover .tooltip{
   transition: all 0.5s ease;
   opacity: 1;
-  top: 50%
+  top: 50%;
 }
 .sidebar.active ul li .tooltipBig{
     display: none;
@@ -133,7 +133,7 @@ body{
   color: #fff;
 }
 .sidebar ul li a{
-  color: #fff;
+  color:#fcfcfc;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -142,8 +142,12 @@ body{
   transition: all 0.4s ease;
 }
 .sidebar ul li a:hover{
-  color: #11101d;
+  color: #11101d ;
   background: #fff;
+}
+.sidebar ul li a i:hover{
+  color: #11101d ;
+  background: #fff ;
 }
 .sidebar ul li i{
   font-size: 18px;
@@ -153,6 +157,7 @@ body{
   border-radius: 12px;
   line-height: 50px;
   text-align: center;
+  
 }
 .sidebar .links_name{
   font-size: 15px;
