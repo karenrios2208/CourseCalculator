@@ -70,9 +70,24 @@ session_start();
               </tr>
 
               <tr>
-                <td><input type="text" name="nombre5" form="my_form" placeholder="Llorar" style="width: 136px"></td>
+                <td><input type="text" name="nombre5" form="my_form" placeholder="Actividades" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje5" form="my_form" placeholder="10" value="10" style="width: 84px"></td>
                 <td><input type="number" name="cali5" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="nombre6" form="my_form" placeholder="Ver Loki" style="width: 136px"></td>
+                <td><input type="number" name="porcentaje6" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="nombre7" form="my_form" placeholder="Procrastinar" style="width: 136px"></td>
+                <td><input type="number" name="porcentaje7" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="nombre8" form="my_form" placeholder="Llorar" style="width: 136px"></td>
+                <td><input type="number" name="porcentaje8" form="my_form" placeholder="0" style="width: 84px"></td>
+                <td><input type="number" name="cali5" form="my_form" placeholder="0" style="width: 84px"></td>
               </tr>
 
           </table>
@@ -118,14 +133,20 @@ session_start();
         let porcentaje3 = document.getElementsByName("porcentaje3")[0].value;
         let porcentaje4 = document.getElementsByName("porcentaje4")[0].value;
         let porcentaje5 = document.getElementsByName("porcentaje5")[0].value;
+        let porcentaje6 = document.getElementsByName("porcentaje5")[0].value;
+        let porcentaje7 = document.getElementsByName("porcentaje5")[0].value;
+        let porcentaje8 = document.getElementsByName("porcentaje5")[0].value;
 
         let cali1 = document.getElementsByName("cali1")[0].value;
         let cali2 = document.getElementsByName("cali2")[0].value;
         let cali3 = document.getElementsByName("cali3")[0].value;
         let cali4 = document.getElementsByName("cali4")[0].value;
         let cali5 = document.getElementsByName("cali5")[0].value;
+        let cali6 = document.getElementsByName("cali5")[0].value;
+        let cali7 = document.getElementsByName("cali5")[0].value;
+        let cali8 = document.getElementsByName("cali5")[0].value;
 
-        let cal = Number(porcentaje1) + Number(porcentaje2) + Number(porcentaje3) + Number(porcentaje4) + Number(porcentaje5);
+        let cal = Number(porcentaje1) + Number(porcentaje2) + Number(porcentaje3) + Number(porcentaje4) + Number(porcentaje5) + Number(porcentaje6) + Number(porcentaje7) + Number(porcentaje8);
 
         if (cal == 100) {
                 document.getElementById("Warn").innerHTML = "<p> </p>";
@@ -134,7 +155,7 @@ session_start();
           	document.getElementById("Warn").innerHTML = "<p> Precaución: <br> El porcentaje no suma 100% total</p>";
         }
 
-        let sum = (Number(porcentaje1) * .01 * Number(cali1)) + (Number(porcentaje2) * .01 * Number(cali2)) + (Number(porcentaje3) * .01 * Number(cali3)) + (Number(porcentaje4) * .01 * Number(cali4)) + (Number(porcentaje5) * .01 * Number(cali5));
+        let sum = (Number(porcentaje1) * .01 * Number(cali1)) + (Number(porcentaje2) * .01 * Number(cali2)) + (Number(porcentaje3) * .01 * Number(cali3)) + (Number(porcentaje4) * .01 * Number(cali4)) + (Number(porcentaje5) * .01 * Number(cali5)) + (Number(porcentaje6) * .01 * Number(cali6)) + (Number(porcentaje7) * .01 * Number(cali7)) + (Number(porcentaje8) * .01 * Number(cali8));
         document.getElementsByName("sum")[0].value = sum;
     }
 </script>
