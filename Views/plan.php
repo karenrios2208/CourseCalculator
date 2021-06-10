@@ -22,6 +22,17 @@ session_start();
       require '../Resources/templates/topbar.php';
     ?>
     <div class="title"> Academic plan history </div>
+    <div class="wrapper">
+      <div class="item">
+        <div class="course"></div>
+        <div class="course"></div>
+      </div>
+      <div class="item">box-2</div>
+      <div class="item">box-3</div>
+      <div class="item">box-4</div>
+      <div class="item">box-5</div>
+      <div class="item">box-6</div>
+    </div>
   </div>
 
     <?php

@@ -1,0 +1,27 @@
+.wrapper{
+    max-width: 1100px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    margin: auto;
+}
+
+.wrapper::-webkit-scrollbar{
+    width:0;
+}
+
+.wrapper .item{
+    min-width: 200px;
+    height: 500px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+}
+
+.wrapper .item .course{
+    height: 100px;
+    width: 100%;
+    background-color: pink;
+    margin-bottom: 5px;
+}
