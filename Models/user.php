@@ -11,6 +11,7 @@ class User
     public $Email;
     public $StudyProgram;
     public $Available;
+    public $photo;
 
     public function __construct($db)
     {
@@ -183,6 +184,58 @@ class User
 
         return $stmt;
     }
+
     
+    function updateName($name,$email )
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        Name = '".$name."'
+
+    WHERE
+        Email = '".$email."';";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    function updatePassword($pwd,$email )
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        Password = '".$pwd."'
+
+    WHERE
+        Email = '".$email."';";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+
+    function updatePhoto($photo,$email )
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        photo = '".$photo."'
+
+    WHERE
+        Email = '".$email."';";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
 ?>

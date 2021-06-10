@@ -20,7 +20,7 @@ $user = new User($db);
 $avai = 1;
   
 // get posted data
-$data = json_decode(file_get_contents("php://input"));
+//$data = json_decode(file_get_contents("php://input"));
 var_dump($_POST);
 // make sure data is not empty
 if(
@@ -43,7 +43,7 @@ if(
     if($user->create()){
   
         // set response code - 201 created
-        http_response_code(201);
+        http_response_code(200);
   
         // tell the user
         echo json_encode(array("message" => "user was created."));
@@ -53,7 +53,7 @@ if(
     else{
   
         // set response code - 503 service unavailable
-        http_response_code(503);
+        http_response_code(404);
   
         // tell the user
         echo json_encode(array("message" => "Unable to create user."));
@@ -64,7 +64,7 @@ if(
 else{
   
     // set response code - 400 bad request
-    http_response_code(400);
+    http_response_code(505);
   
     // tell the user
     echo json_encode(array("message" => "Unable to create user. Data is incomplete."));

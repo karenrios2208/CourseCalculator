@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <input id="changescreen" type="hidden"/>
     <title>Register</title>
     <link rel="stylesheet" href="../Resources/css/login.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
@@ -11,7 +12,7 @@
 <body>
     <h1>Register</h1>
     <div>
-        <form action="../Controllers/User/create.php" method="POST">
+        <form id="registeruser">
             <p> Email: </p>
             <input type="text" id="mail" name="mail" />
             <br />
@@ -27,7 +28,8 @@
             <span id="Security"></span>
             <br />
             <button type="submit" name="Register">REGISTER</button>
-
+            <br/>
+            <span id="msgn"></span>
         </form>
         <br />
         <p class="text"> Already have an account? 
@@ -37,6 +39,34 @@
         </p>
     </div>
     <script>
+
+var xhttp;
+    var form = document.getElementById("registeruser");
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            var formdata = new FormData(form);
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msgn").innerHTML ='User created Succesfully';
+                    document.getElementById("changescreen").innerHTML ='<meta http-equiv="refresh" content="3; URL=login.html" />';
+                }
+                else if (this.readyState == 4 && this.status == 404) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msgn").innerHTML = 'Wrong email or password';
+                }
+                else if (this.readyState == 4 && this.status == 505) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msgn").innerHTML = 'No empty fields allowed';
+                }
+            };
+
+            xhttp.open("POST", "../Controllers/User/create.php", false);
+            xhttp.send(formdata);
+        }
+
+
         function showHint(str) {
 
             if (str.length == 0) {
