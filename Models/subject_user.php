@@ -49,9 +49,9 @@ class Subject_User
                 SET
                     SubjectKey = :sk,
                     Email = :mail,
-                    FinalGrade = grade,
-                    Teacher = teacher,
-                    SemesterCompleted = sem
+                    FinalGrade = :grade,
+                    Teacher = :teacher,
+                    SemesterCompleted = :sem
                 WHERE
                     Email = :mail";
     
@@ -88,9 +88,9 @@ class Subject_User
             SET
                 SubjectKey = :sk,
                 Email = :mail,
-                FinalGrade = grade,
-                Teacher = teacher,
-                SemesterCompleted = sem
+                FinalGrade = :grade,
+                Teacher = :teacher,
+                SemesterCompleted = :sem
             WHERE
                 Email = :mail";
 
@@ -105,10 +105,11 @@ class Subject_User
 
 
        // bind new values
-       $stmt->bindParam(":user", $this->Username);
-       $stmt->bindParam(":fname", $this->FullName);
-       $stmt->bindParam(":mail", $this->Email);
-       $stmt->bindParam(":pwd", $this->Password);
+       $stmt->bindParam(":sk", $this->SubjectKey);
+        $stmt->bindParam(":mail", $this->Email);
+        $stmt->bindParam(":grade", $this->FinalGrade);
+        $stmt->bindParam(":teacher", $this->Teacher);
+        $stmt->bindParam(":sem", $this->SemesterCompleted);
       
        // execute query
        if($stmt->execute()){
@@ -122,11 +123,11 @@ class Subject_User
      
        // select all query
        $query = "SELECT
-                   q.Username, q.FullName, q.Email, q.Password
+                   q.SubjectKey, q.Email, q.FinalGrade, q.Teacher, q.SemesterCompleted
                FROM
                    " . $this->table_name . " q
                ORDER BY
-                   q.Username ASC";
+                   q.SubjectKey ASC";
      
        // prepare query statement
        $stmt = $this->conn->prepare($query);
@@ -136,6 +137,46 @@ class Subject_User
      
        return $stmt;
    }
+   function updateDataSubject($Fn, $Teach, $Sc, $Email, $Sk)
+   {
+        
+    // update query
+            $query = "UPDATE
+            " . $this->table_name . "
+        SET
+            FinalGrade = '".$Fn."', 
+            Teacher= '".$Teach."', 
+            SemesterCompleted = '".$Sc."'
+
+        WHERE
+            Email = '".$Email."' AND 
+            SubjecKey ='".$Sk."'  ;";
+
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->execute();
+
+            return $stmt;
+}
+
+function searchExistence($Sk, $Email){
+        
+    $query = "SELECT
+                u.SubjecKey, u.Email
+            FROM " . $this->table_name . " u
+            WHERE  u.SubjecKey='".$Sk."' and u.Email = '".$Email."'
+            ORDER BY 
+                u.SubjecKey DESC;";
+
+    $stmt = $this->conn->prepare($query);
+
+    $stmt->execute();
+
+    return $stmt;
+}
+
+
+
 
 }
 ?>
