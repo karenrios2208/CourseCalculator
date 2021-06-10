@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="../Resources/css/navbar.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Plan</title> 
+    <title>Calculator</title> 
   </head>
 <body>
     <?php
@@ -20,12 +20,10 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
-    <div class="title"> Academic plan history </div>
+    <div class="title">Grade Calculator</div>
   </div>
-
     <?php
       require '../Resources/templates/sidebar-scripts.php';
     ?>
-
 </body>
 </html>

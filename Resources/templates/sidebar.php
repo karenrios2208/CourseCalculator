@@ -21,11 +21,11 @@
       <span class="tooltip">Account</span>
     </li>
     <li>
-      <a href="#">
+      <a href="../Views/calculator.php">
         <i class='bx bx-calculator'  ></i>
-        <span class="links_name">Grade Simulator</span>
+        <span class="links_name">Grade Calculator</span>
       </a>
-      <span class="tooltipBig">Grade Simulator</span>
+      <span class="tooltipBig">Grade Calculator</span>
     </li>
     <li>
       <a href="../Views/plan.php">
