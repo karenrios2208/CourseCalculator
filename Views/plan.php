@@ -8,6 +8,7 @@ session_start();
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Resources/css/navbar.css">
+    <link rel="stylesheet" href="../Resources/css/carousel.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Plan</title> 
