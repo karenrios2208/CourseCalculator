@@ -53,7 +53,7 @@ class Subject_User
                     Teacher = teacher,
                     SemesterCompleted = sem
                 WHERE
-                    Email = :user";
+                    Email = :mail";
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -80,6 +80,62 @@ class Subject_User
     
         return false;
     }
+
+    function create(){
+        // query to insert record
+        $query = "INSERT INTO
+               ".$this->table_name."
+            SET
+                SubjectKey = :sk,
+                Email = :mail,
+                FinalGrade = grade,
+                Teacher = teacher,
+                SemesterCompleted = sem
+            WHERE
+                Email = :mail";
+
+       // prepare query
+       $stmt = $this->conn->prepare($query);
+
+       // sanitize
+       $this->Username=htmlspecialchars(strip_tags($this->Username));
+       $this->FullName=htmlspecialchars(strip_tags($this->FullName));
+       $this->Email=htmlspecialchars(strip_tags($this->Email));
+       $this->Password=htmlspecialchars(strip_tags($this-> Password));
+
+
+       // bind new values
+       $stmt->bindParam(":user", $this->Username);
+       $stmt->bindParam(":fname", $this->FullName);
+       $stmt->bindParam(":mail", $this->Email);
+       $stmt->bindParam(":pwd", $this->Password);
+      
+       // execute query
+       if($stmt->execute()){
+       return true;
+       }
+
+       return false;
+   }
+
+   function read(){
+     
+       // select all query
+       $query = "SELECT
+                   q.Username, q.FullName, q.Email, q.Password
+               FROM
+                   " . $this->table_name . " q
+               ORDER BY
+                   q.Username ASC";
+     
+       // prepare query statement
+       $stmt = $this->conn->prepare($query);
+     
+       // execute query
+       $stmt->execute();
+     
+       return $stmt;
+   }
 
 }
 ?>
