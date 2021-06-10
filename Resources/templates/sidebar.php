@@ -7,7 +7,7 @@
   </div>
   <ul class="nav_list">
     <li>
-      <a href="../Views/mainPage.php">
+      <a href="../Views/home.php">
         <i class='bx bx-home'  ></i>
         <span class="links_name">Home</span>
       </a>

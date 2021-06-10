@@ -10,7 +10,7 @@
     width:0;
 }
 
-.wrapper .item{
+.wrapper .semester{
     min-width: 200px;
     height: 455px;
     background-color: #ddd;
@@ -18,7 +18,7 @@
     padding: 0px;
 }
 
-.wrapper .item .course{
+.wrapper .semester .course{
     height: 60px;
     line-height: 60px;
     width: 100%;

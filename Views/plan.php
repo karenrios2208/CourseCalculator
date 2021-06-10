@@ -21,9 +21,13 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
+
+    <?php 
+    ?>
+
     <div class="title"> Academic plan history </div>
     <div class="wrapper">
-      <div class="item">
+      <div class="semester">
         <div class="course">
           <p class="courseName">1</p>
         </div>
@@ -34,11 +38,11 @@ session_start();
         <div class="course">6</div>
         <div class="course">7</div>
       </div>
-      <div class="item">box-2</div>
-      <div class="item">box-3</div>
-      <div class="item">box-4</div>
-      <div class="item">box-5</div>
-      <div class="item">box-6</div>
+      <div class="semester">box-2</div>
+      <div class="semester">box-3</div>
+      <div class="semester">box-4</div>
+      <div class="semester">box-5</div>
+      <div class="semester">box-6</div>
     </div>
   </div>
 

@@ -35,6 +35,10 @@ if( $_POST['email'] != "" && $_POST['pwd'] != "" )
         VAR_DUMP($value);
         $_SESSION['name'] = $value[0]['Name'];
 
+        $stmt2 = $user->searchPlan($_POST['email']);
+        $value = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+        $_SESSION['plan'] = $value[0]['StudyProgram'];
+
         
     }
     else{
