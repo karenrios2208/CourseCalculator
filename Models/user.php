@@ -11,6 +11,7 @@ class User
     public $Email;
     public $StudyProgram;
     public $Available;
+    public $photo;
 
     public function __construct($db)
     {
@@ -220,12 +221,12 @@ class User
     }
 
 
-    function updateStudy($sp,$email )
+    function updatePhoto($photo,$email )
     {
         $query = "UPDATE
         " . $this->table_name . "
     SET
-        StudyProgram = '".$sp."'
+        photo = '".$photo."'
 
     WHERE
         Email = '".$email."';";

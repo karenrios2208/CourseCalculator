@@ -24,9 +24,10 @@ $user = new User($db);
 // get name of user to be edited
 //$data = json_decode(file_get_contents("php://input"));
 
-if( !is_null($_POST['sp'])){
+
+if( isset($_POST['photo'])){
     
-    if($user->updateStudy($_POST['sp'], $_POST['email'])){
+    if($user->updateStudy($_POST['photo'], $_POST['email'])){
         http_response_code(200);
     }
     else{

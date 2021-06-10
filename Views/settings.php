@@ -30,7 +30,16 @@ session_start();
         <button type="submit" name="change">Change</button>
         <p id="msgn"></p>
       </form> 
+
       <div class="text">Change photo</div>
+      <form id = "cphoto">
+        <input type="file"
+       id="photo" name="photo"
+       accept="image/png, image/jpeg">
+        <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['email'] ?>"/>
+        <button type="submit" name="change">Submit</button>
+        <p id="msgph"></p>
+      </form> 
       
       <div class="text">Change password</div>
       <form id = "cpassword">
@@ -38,6 +47,7 @@ session_start();
         <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['email'] ?>"/>
         <button type="submit" name="change">Change</button>
         <p id="msgp"></p>
+        </form> 
     </div>
   </div>
     <?php
@@ -95,7 +105,7 @@ session_start();
         }
 
    // function for changing StudyProgram       
-        var form2 = document.getElementById("cstudy");
+        var form2 = document.getElementById("cphoto");
         form2.onsubmit = function (e) {
             e.preventDefault();
             var formdata = new FormData(form);
@@ -103,19 +113,19 @@ session_start();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgsp").innerHTML = 'Study Program changed succesfully';
+                    document.getElementById("msgsph").innerHTML = 'Photo changed succesfully';
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgsp").innerHTML = 'Wrong email or password';
+                    document.getElementById("msgsph").innerHTML = 'Wrong email or password';
                 }
                 else if (this.readyState == 4 && this.status == 505) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgsp").innerHTML = 'No empty fields allowed';
+                    document.getElementById("msgsph").innerHTML = 'No empty fields allowed';
                 }
             };
 
-            xhttp.open("POST", "../Controllers/User/updateStudyP.php", false);
+            xhttp.open("POST", "../Controllers/User/updatePhoto.php", false);
             xhttp.send(formdata);
         }
 
