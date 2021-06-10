@@ -201,6 +201,40 @@ class User
 
         return $stmt;
     }
-    
+
+    function updatePassword($pwd,$email )
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        Password = '".$pwd."'
+
+    WHERE
+        Email = '".$email."';";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+
+    function updateStudy($sp,$email )
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        StudyProgram = '".$sp."'
+
+    WHERE
+        Email = '".$email."';";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
 ?>
