@@ -10,8 +10,9 @@ class User
     public $Password;
     public $Email;
     public $StudyProgram;
-    public $Available;
     public $photo;
+    public $Available;
+
 
     public function __construct($db)
     {
@@ -139,9 +140,9 @@ class User
                     u.Name, u.Password, u.Email, u.StudyProgram
                 FROM " . $this->table_name . " u
                 WHERE 
-                    u.Name = ?
+                    u.Email = ?
                     ORDER BY 
-                        u.Name DESC";
+                        u.Email DESC";
 
         $stmt = $this->conn->prepare($query);
 

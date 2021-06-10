@@ -38,7 +38,13 @@ if(
     $user->Email = $_POST['mail'];
     $user->Password = $_POST['pwd'];
 
-  
+    $stmt = $user->search($_POST['mail']);
+    $numrows = $stmt->rowCount();
+
+    if ($numrows > 0)
+    {
+        http_response_code(404); // No se pudo crear
+    }
     // create the user
     if($user->create()){
   
@@ -53,7 +59,7 @@ if(
     else{
   
         // set response code - 503 service unavailable
-        http_response_code(404);
+        http_response_code(404); // No se pudo crear
   
         // tell the user
         echo json_encode(array("message" => "Unable to create user."));
@@ -64,7 +70,7 @@ if(
 else{
   
     // set response code - 400 bad request
-    http_response_code(505);
+    http_response_code(505); //Hay datos vacios
   
     // tell the user
     echo json_encode(array("message" => "Unable to create user. Data is incomplete."));
