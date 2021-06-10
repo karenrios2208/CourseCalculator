@@ -185,7 +185,7 @@ class User
     }
 
     
-    function updateName($email, $name)
+    function updateName($name,$email )
     {
         $query = "UPDATE
         " . $this->table_name . "
@@ -193,7 +193,7 @@ class User
         Name = '".$name."'
 
     WHERE
-        Email = '".$email."';
+        Email = '".$email."';";
 
         $stmt = $this->conn->prepare($query);
 

@@ -13,8 +13,6 @@ include (dirname(ROOT_PATH) .'/Models/database.php');
 // instantiate user object
 include (dirname(ROOT_PATH) .'/Models/user.php');
 
-session_start();
-
 
 // get database connection
 $database = new Database();
@@ -25,11 +23,10 @@ $user = new User($db);
 
 // get name of user to be edited
 //$data = json_decode(file_get_contents("php://input"));
-vardump($_SESSION['email']);
-
+var_dump($_POST);
 if( $_POST['user'] !=''){
     
-    if($user->updateName($_POST['user'], $_SESSION['email'])){
+    if($user->updateName($_POST['user'], $_POST['email'])){
         http_response_code(200);
     }
     else{

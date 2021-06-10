@@ -25,7 +25,8 @@ session_start();
     <div class="creditCardForm">
       <div class="text">Change name</div>
       <form id = "cname">
-        <input type="text" id="user" name="user" />
+        <input type="text" id="user" name="user"/>
+        <input type="hidden" id="email" name="email" value=<?php echo $_SESSION['email'] ?>/>
         <button type="submit" name="change">Change</button>
         <p id="msg"></p>
       </form> 
