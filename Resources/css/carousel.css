@@ -1,0 +1,36 @@
+.wrapper{
+    max-width: 1100px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    margin: auto;
+}
+
+.wrapper::-webkit-scrollbar{
+    width:0;
+}
+
+.wrapper .semester{
+    min-width: 200px;
+    height: 455px;
+    background-color: #ddd;
+    margin-right: 2px;
+    padding: 0px;
+}
+
+.wrapper .semester .course{
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: pink;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.courseName{
+    text-align: center;
+    height:100%;
+    width: 100%;
+    margin-top: 0px;
+    
+}

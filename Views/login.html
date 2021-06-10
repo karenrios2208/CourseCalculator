@@ -10,7 +10,7 @@
 <body>
     <h1>Log in</h1>
     <div>
-        <form id="infouser" action="mainPage.html">
+        <form id="infouser" action="home.html">
             <p> Email: </p>
             <input type="text" id="email" name="email" />
             <br />
@@ -40,7 +40,7 @@
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("Security").innerHTML = '<meta http-equiv="refresh" content="0; URL=mainPage.php" />';
+                    document.getElementById("Security").innerHTML = '<meta http-equiv="refresh" content="0; URL=home.php" />';
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);

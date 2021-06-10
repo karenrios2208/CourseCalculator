@@ -8,6 +8,7 @@ session_start();
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Resources/css/navbar.css">
+    <link rel="stylesheet" href="../Resources/css/carousel.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Plan</title> 
@@ -20,7 +21,29 @@ session_start();
     <?php
       require '../Resources/templates/topbar.php';
     ?>
+
+    <?php 
+    ?>
+
     <div class="title"> Academic plan history </div>
+    <div class="wrapper">
+      <div class="semester">
+        <div class="course">
+          <p class="courseName">1</p>
+        </div>
+        <div class="course">2</div>
+        <div class="course">3</div>
+        <div class="course">4</div>
+        <div class="course">5</div>
+        <div class="course">6</div>
+        <div class="course">7</div>
+      </div>
+      <div class="semester">box-2</div>
+      <div class="semester">box-3</div>
+      <div class="semester">box-4</div>
+      <div class="semester">box-5</div>
+      <div class="semester">box-6</div>
+    </div>
   </div>
 
     <?php

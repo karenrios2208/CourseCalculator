@@ -185,6 +185,19 @@ class User
         return $stmt;
     }
 
+    function searchPlan($email)
+    {
+        $query = "SELECT u.StudyProgram
+                FROM " . $this->table_name . " u
+                WHERE u.Email='".$email."'
+                LIMIT 1;";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
     
     function updateName($name,$email )
     {
