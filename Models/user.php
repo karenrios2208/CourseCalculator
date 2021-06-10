@@ -183,6 +183,24 @@ class User
 
         return $stmt;
     }
+
+    
+    function updateName($email, $name)
+    {
+        $query = "UPDATE
+        " . $this->table_name . "
+    SET
+        Name = '".$name."'
+
+    WHERE
+        Email = '".$email."';
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
     
 }
 ?>

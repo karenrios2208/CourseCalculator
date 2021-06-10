@@ -24,7 +24,11 @@ session_start();
     <div class="title">User configuration</div>
     <div class="creditCardForm">
       <div class="text">Change name</div>
-      <form id="changeName" action="settings.php"></form>
+      <form id = "cname">
+        <input type="text" id="user" name="user" />
+        <button type="submit" name="change">Change</button>
+        <p id="msg"></p>
+      </form> 
       <div class="text">Change photo</div>
       <div class="text">Change password</div>
       <div class="text">Change studyplan</div>
@@ -33,5 +37,33 @@ session_start();
     <?php
       require '../Resources/templates/sidebar-scripts.php';
     ?>
+    <script>
+
+    var xhttp;
+    var form = document.getElementById("cname");
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            var formdata = new FormData(form);
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msg").innerHTML = 'Name changed succesfully';
+                }
+                else if (this.readyState == 4 && this.status == 404) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msg").innerHTML = 'Wrong email or password';
+                }
+                else if (this.readyState == 4 && this.status == 505) {
+                    //var karen = JSON.parse(this.responseText);
+                    document.getElementById("msg").innerHTML = 'No empty fields allowed';
+                }
+            };
+
+            xhttp.open("POST", "../Controllers/User/updateName.php", false);
+            xhttp.send(formdata);
+        }
+
+    </script>
 </body>
 </html>
