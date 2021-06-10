@@ -10,8 +10,9 @@ class User
     public $Password;
     public $Email;
     public $StudyProgram;
-    public $Available;
     public $photo;
+    public $Available;
+
 
     public function __construct($db)
     {
@@ -24,16 +25,16 @@ class User
         //Query
         $query = "UPDATE  ".$this->table_name."
                 SET Available = '0'
-                WHERE Name = :user";
+                WHERE Email = :user";
 
         //prepare query statement
         $stmt = $this->conn->prepare($query);
 
         //sanitize
-        $this->Name=htmlspecialchars(strip_tags($this->Name));
+        $this->Email=htmlspecialchars(strip_tags($this->Email));
 
         //bind new values
-        $stmt->bindParam(":user", $this->Name);
+        $stmt->bindParam(":user", $this->Email);
 
         // execute the query
         if($stmt->execute()){
@@ -53,21 +54,22 @@ class User
                     Password = :pwd,
                     Email = :mail,
                     StudyProgram= :sp
+                    Name = :name;
                 WHERE
-                    Name = :user";
+                    Email = :user";
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
     
         // sanitize
-        $this->Username=htmlspecialchars(strip_tags($this->Username));
-        $this->FullName=htmlspecialchars(strip_tags($this->FullName));
+        $this->Name=htmlspecialchars(strip_tags($this->Name));
         $this->Email=htmlspecialchars(strip_tags($this->Email));
-        $this->Password=htmlspecialchars(strip_tags($this-> Password));
+        $this->Password=htmlspecialchars(strip_tags($this->Password));
+        $this->StudyProgram=htmlspecialchars(strip_tags($this->StudyProgram));
     
     
         // bind new values
-        $stmt->bindParam(":user", $this->Name);
+        $stmt->bindParam(":name", $this->Name);
         $stmt->bindParam(":mail", $this->Email);
         $stmt->bindParam(":pwd", $this->Password);
         $stmt->bindParam(":sp", $this->StudyProgram);
@@ -139,9 +141,9 @@ class User
                     u.Name, u.Password, u.Email, u.StudyProgram
                 FROM " . $this->table_name . " u
                 WHERE 
-                    u.Name = ?
+                    u.Email = ?
                     ORDER BY 
-                        u.Name DESC";
+                        u.Email DESC";
 
         $stmt = $this->conn->prepare($query);
 

@@ -25,12 +25,13 @@ session_start();
     <div class="creditCardForm">
       <div class="text">Change name</div>
       <form id = "cname">
+        <label> New name:   </label>
         <input type="text" id="user" name="user"/>
         <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['email'] ?>"/>
         <button type="submit" name="change">Change</button>
         <p id="msgn"></p>
       </form> 
-
+      <br/>
       <!-- <div class="text">Change photo</div>
       <form id = "cphoto">
         <input type="file"
@@ -43,6 +44,7 @@ session_start();
       
       <div class="text">Change password</div>
       <form id = "cpassword">
+        <label> New password: </label>
         <input type="text" id="pwd" name="pwd"/>
         <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['email'] ?>"/>
         <button type="submit" name="change">Change</button>
@@ -65,6 +67,7 @@ session_start();
                 if (this.readyState == 4 && this.status == 200) {
                     //var karen = JSON.parse(this.responseText);
                     document.getElementById("msgn").innerHTML = 'Name changed succesfully';
+                    
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);

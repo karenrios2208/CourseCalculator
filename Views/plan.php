@@ -34,7 +34,9 @@ session_start();
           $semester = $item['semester'];
           $subjects = $item['subjects'];
           echo "<div class='semester'> ";
-          echo $semester;
+          echo "<div class='semester_header'> ";
+          echo "Semester ".$semester;
+          echo "</div>";
           
           foreach($subjects as $mat)
           {
@@ -51,24 +53,6 @@ session_start();
         }
         
       ?>
-
-    <!-- <div class="semester">
-        <div class="course">
-          <p class="courseName">1</p>
-        </div>
-        <div class="course">2</div>
-        <div class="course">3</div>
-        <div class="course">4</div>
-        <div class="course">5</div>
-        <div class="course">6</div>
-        <div class="course">7</div>
-      </div>
-      <div class="semester">box-2</div>
-      <div class="semester">box-3</div>
-      <div class="semester">box-4</div>
-      <div class="semester">box-5</div>
-      <div class="semester">box-6</div>
-    </div> -->
       
   </div>
 

@@ -244,3 +244,16 @@ body{
   height:50px;
   width: 100%;
 } 
+
+.topbar_header{
+  width:auto;
+  text-align: right;
+  margin-right: 50px;
+  line-height: 50px;
+  color: white;
+}
+
+.label{ 
+  font-size:16px;
+  margin-right: 5px;
+}

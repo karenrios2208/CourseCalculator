@@ -20,7 +20,10 @@
             <input type="text" id="user" name="user" />
             <br />
             <p> Study Program: </p>
-            <input type="text" id="sp" name="sp" />
+            <select id="sp" name="sp">
+                <option value="ITC11">ITC11</option>
+                <option value="INCQ13">INCQ13</option>
+            </select>
             <br />
             <p> Password: </p>
             <input type="password" id="pwd" name="pwd" onkeyup="showHint(this.value)" />
@@ -29,7 +32,7 @@
             <br />
             <button type="submit" name="Register">REGISTER</button>
             <br/>
-            <span id="msgn"></span>
+            <p id ="error"></p>
         </form>
         <br />
         <p class="text"> Already have an account? 
@@ -49,16 +52,16 @@ var xhttp;
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgn").innerHTML ='User created Succesfully';
-                    document.getElementById("changescreen").innerHTML ='<meta http-equiv="refresh" content="3; URL=login.html" />';
+                    document.getElementById("error").innerHTML ='User created Succesfully';
+                    document.getElementById("changescreen").innerHTML ='<meta http-equiv="refresh" content="2; URL=login.html" />';
                 }
                 else if (this.readyState == 4 && this.status == 404) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgn").innerHTML = 'Wrong email or password';
+                    document.getElementById("error").innerHTML = '<p class="error">Email already in use</p>';
                 }
                 else if (this.readyState == 4 && this.status == 505) {
                     //var karen = JSON.parse(this.responseText);
-                    document.getElementById("msgn").innerHTML = 'No empty fields allowed';
+                    document.getElementById("error").innerHTML = '<p class="error">No empty fields allowed</p>';
                 }
             };
 
@@ -70,7 +73,7 @@ var xhttp;
         function showHint(str) {
 
             if (str.length == 0) {
-                document.getElementById("Security").innerHTML = this.responseText;
+                document.getElementById("Security").innerHTML = "<h2 class=\"\"></h2>";
                 return;
             }
 

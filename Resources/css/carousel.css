@@ -34,3 +34,10 @@
     margin-top: 0px;
     margin-bottom: 2px;
 }
+
+.wrapper .semester .semester_header{
+    text-align: center;
+    color: white;
+    background-color: rgb(138, 138, 138);
+    margin-bottom: 5px;
+}
