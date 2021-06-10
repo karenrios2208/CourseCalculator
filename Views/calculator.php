@@ -41,36 +41,36 @@ session_start();
                   <col style="width: 84px">
               </colgroup>
               <tr>
-                  <th>Nombre del rubro</th>
-                  <th>Porcentaje <br> (0 - 100%)</th>
-                  <th>Calificacion <br> (0 - 100)</th>
+                  <th>Name of the activity</th>
+                  <th>Percentage <br> (0 - 100%)</th>
+                  <th>Grade <br> (0 - 100)</th>
               </tr>
               <tr>
-                <td><input type="text" name="nombre1" form="my_form" placeholder="Tareas" style="width: 136px"></td>
+                <td><input type="text" name="nombre1" form="my_form" placeholder="Homeworks" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje1" form="my_form" placeholder="25" value="25" style="width: 84px"></td>
                 <td><input type="number" name="cali1" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
               </tr>
               
               <tr>
-                <td><input type="text" name="nombre2" form="my_form" placeholder="Proyecto Parcial" style="width: 136px"></td>
+                <td><input type="text" name="nombre2" form="my_form" placeholder="Partial Projects" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje2" form="my_form" placeholder="25" value="25" style="width: 84px"></td>
                 <td><input type="number" name="cali2" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
               </tr>
 
               <tr>
-                <td><input type="text" name="nombre3" form="my_form" placeholder="Examenes" style="width: 136px"></td>
+                <td><input type="text" name="nombre3" form="my_form" placeholder="Exams" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje3" form="my_form" placeholder="20" value="20" style="width: 84px"></td>
                 <td><input type="number" name="cali3" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
               </tr>
 
               <tr>
-                <td><input type="text" name="nombre4" form="my_form" placeholder="Examen Final" style="width: 136px"></td>
+                <td><input type="text" name="nombre4" form="my_form" placeholder="Final Exam" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje4" form="my_form" placeholder="20" value="20" style="width: 84px"></td>
                 <td><input type="number" name="cali4" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
               </tr>
 
               <tr>
-                <td><input type="text" name="nombre5" form="my_form" placeholder="Llorar" style="width: 136px"></td>
+                <td><input type="text" name="nombre5" form="my_form" placeholder="Cry" style="width: 136px"></td>
                 <td><input type="number" name="porcentaje5" form="my_form" placeholder="10" value="10" style="width: 84px"></td>
                 <td><input type="number" name="cali5" form="my_form" placeholder="100" value="100" style="width: 84px"></td>
               </tr>
