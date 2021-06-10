@@ -31,7 +31,7 @@ session_start();
         <p id="msgn"></p>
       </form> 
 
-      <div class="text">Change photo</div>
+      <!-- <div class="text">Change photo</div>
       <form id = "cphoto">
         <input type="file"
        id="photo" name="photo"
@@ -39,7 +39,7 @@ session_start();
         <input type="hidden" id="email" name="email" value="<?php echo $_SESSION['email'] ?>"/>
         <button type="submit" name="change">Submit</button>
         <p id="msgph"></p>
-      </form> 
+      </form>  -->
       
       <div class="text">Change password</div>
       <form id = "cpassword">
@@ -83,7 +83,7 @@ session_start();
         var form1 = document.getElementById("cpassword");
         form1.onsubmit = function (e) {
             e.preventDefault();
-            var formdata = new FormData(form);
+            var formdata = new FormData(form1);
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {

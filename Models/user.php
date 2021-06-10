@@ -220,11 +220,11 @@ class User
     {
         $query = "UPDATE
         " . $this->table_name . "
-    SET
-        Password = '".$pwd."'
+        SET
+            Password = '".$pwd."'
 
-    WHERE
-        Email = '".$email."';";
+        WHERE
+            Email = '".$email."';";
 
         $stmt = $this->conn->prepare($query);
 

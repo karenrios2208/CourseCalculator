@@ -22,12 +22,36 @@ session_start();
       require '../Resources/templates/topbar.php';
     ?>
 
-    <?php 
-    ?>
-
     <div class="title"> Academic plan history </div>
     <div class="wrapper">
-      <div class="semester">
+      <?php 
+        $plan = $_SESSION['plan'];
+        $file = file_get_contents("../Resources/json/".$plan.".json");
+        $json_a = json_decode($file, true);
+        
+        foreach($json_a as $item){
+          $semester = $item['semester'];
+          $subjects = $item['subjects'];
+          echo "<div class='semester'> ";
+          echo $semester;
+          
+          foreach($subjects as $mat)
+          {
+            $name = $mat['nombre'];
+            echo "<div class='course'> ";
+            echo "<p class='courseName'> ";
+            echo $mat['clave'];
+            echo "<p class='courseName'> ";
+            echo $name;
+            echo "</p> </div>";
+          }
+
+          echo "</div>";
+        }
+        
+      ?>
+
+    <!-- <div class="semester">
         <div class="course">
           <p class="courseName">1</p>
         </div>
@@ -43,7 +67,8 @@ session_start();
       <div class="semester">box-4</div>
       <div class="semester">box-5</div>
       <div class="semester">box-6</div>
-    </div>
+    </div> -->
+      
   </div>
 
     <?php

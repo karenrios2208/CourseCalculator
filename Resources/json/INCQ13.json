@@ -1,0 +1,237 @@
+[
+    {
+        "semester": 1,
+        "subjects": [
+            {
+                "nombre": "Ciencias naturales y desarrollo sustentable",
+                "clave": "DS1003",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Física I",
+                "clave": "F1002",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Lengua extranjera",
+                "clave": "H1016",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Análisis y expresión verbal",
+                "clave": "H1040",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Matemáticas I",
+                "clave": "MA1015",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química",
+                "clave": "Q1001",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Introducción a las ciencias químicas, la nanotecnología y sus aplicaciones",
+                "clave": "Q1017",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
+        ]
+    },
+    {
+        "semester": 2,
+        "subjects": [
+            {
+                "nombre": "Física II",
+                "clave": "F1003",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Matemáticas II",
+                "clave": "MA1017",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química orgánica estructural",
+                "clave": "Q1007",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química experimental",
+                "clave": "Q1014",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química de materiales y nanomateriales",
+                "clave": "Q1018",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Solución de problemas con programación",
+                "clave": "TC1017",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
+        ]
+    },
+    {
+        "semester": 3,
+        "subjects": [
+            {
+                "nombre": "Ética, persona y sociedad",
+                "clave": "H1018",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Humanidades y bellas artes",
+                "clave": "HS2000",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Matemáticas III",
+                "clave": "MA2009",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química analítica",
+                "clave": "Q1010",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química orgánica mecanística",
+                "clave": "Q1011",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Métodos modernos en química analítica",
+                "clave": "Q1015",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
+        ]
+    },
+    {
+        "semester": 4,
+        "subjects": [
+            {
+                "nombre": "Biología molecular",
+                "clave": "BT1003",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Expresión verbal en el ámbito profesional",
+                "clave": "H2001",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Ecuaciones diferenciales",
+                "clave": "MA2010",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de química orgánica general",
+                "clave": "Q1009",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Bioquímica",
+                "clave": "Q2000",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Termodinámica molecular",
+                "clave": "Q2002",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
+        ]
+    },
+    {
+        "semester": 5,
+        "subjects": [
+            {
+                "nombre": "Ciudadanía",
+                "clave": "HS2005",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Probabilidad y estadística",
+                "clave": "MA1006",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de síntesis orgánicas",
+                "clave": "Q1013",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Cinética y dinámica moleculares",
+                "clave": "Q2013",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Laboratorio de fisicoquímica",
+                "clave": "Q2014",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                },
+                {
+                "nombre": "Química analítica instrumental y nanoscopía",
+                "clave": "Q2018",
+                "requisitoAcreditado": [],
+                "requisitoCursado": []
+                }
+        ]
+    },
+    {
+        "semester": 6,
+        "subjects": [
+            
+        ]
+    },
+    {
+        "semester": 7,
+        "subjects": [
+            
+        ]
+    },
+    {
+        "semester": 8,
+        "subjects": [
+            
+        ]
+    },
+    {
+        "semester": 9,
+        "subjects": [
+            
+        ]
+    }
+]
