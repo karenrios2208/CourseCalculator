@@ -24,8 +24,15 @@ session_start();
     <div class="title"> Academic plan history </div>
     <div class="wrapper">
       <div class="item">
-        <div class="course"></div>
-        <div class="course"></div>
+        <div class="course">
+          <p class="courseName">1</p>
+        </div>
+        <div class="course">2</div>
+        <div class="course">3</div>
+        <div class="course">4</div>
+        <div class="course">5</div>
+        <div class="course">6</div>
+        <div class="course">7</div>
       </div>
       <div class="item">box-2</div>
       <div class="item">box-3</div>

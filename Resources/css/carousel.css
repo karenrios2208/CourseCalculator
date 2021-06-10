@@ -12,16 +12,25 @@
 
 .wrapper .item{
     min-width: 200px;
-    height: 500px;
-    line-height: 110px;
-    text-align: center;
+    height: 455px;
     background-color: #ddd;
     margin-right: 2px;
+    padding: 0px;
 }
 
 .wrapper .item .course{
-    height: 100px;
+    height: 60px;
+    line-height: 60px;
     width: 100%;
     background-color: pink;
     margin-bottom: 5px;
+    text-align: center;
+}
+
+.courseName{
+    text-align: center;
+    height:100%;
+    width: 100%;
+    margin-top: 0px;
+    
 }
