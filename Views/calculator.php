@@ -34,72 +34,72 @@ session_start();
               </colgroup>
               <tr>
                   <th>Nombre del rubro</th>
-                  <th>Porcentaje</th>
-                  <th>Calificacion</th>
+                  <th>Porcentaje (0 - 100%)</th>
+                  <th>Calificacion (0 - 100)</th>
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="nombre1" form="my_form" />
+                  <input type="text" name="nombre1" form="my_form" placeholder="Matematicas"/>
                 </td>
                 <td>
-                  <input type="number" name="porcentaje1" form="my_form" />
+                  <input type="number" name="porcentaje1" form="my_form" placeholder="25" value="25"/>
                 </td>
                 <td>
-                  <input type="number" name="cali1" form="my_form" />
+                  <input type="number" name="cali1" form="my_form" placeholder="100" value="100"/>
                 </td>
               </tr>
               
               <tr>
                 <td>
-                  <input type="text" name="nombre2" form="my_form" />
+                  <input type="text" name="nombre2" form="my_form" placeholder="Física"/>
                 </td>
                 <td>
-                  <input type="number" name="porcentaje2" form="my_form" />
+                  <input type="number" name="porcentaje2" form="my_form" placeholder="25" value="25"/>
                 </td>
                 <td>
-                  <input type="number" name="cali2" form="my_form" />
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <input type="text" name="nombre3" form="my_form" />
-                </td>
-                <td>
-                  <input type="number" name="porcentaje3" form="my_form" />
-                </td>
-                <td>
-                  <input type="number" name="cali3" form="my_form" />
+                  <input type="number" name="cali2" form="my_form" placeholder="100" value="100"/>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="text" name="nombre4" form="my_form" />
+                  <input type="text" name="nombre3" form="my_form" placeholder="Computación"/>
                 </td>
                 <td>
-                  <input type="number" name="porcentaje4" form="my_form" />
+                  <input type="number" name="porcentaje3" form="my_form" placeholder="20" value="20"/>
                 </td>
                 <td>
-                  <input type="number" name="cali4" form="my_form" />
+                  <input type="number" name="cali3" form="my_form" placeholder="100" value="100"/>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="text" name="nombre5" form="my_form" />
+                  <input type="text" name="nombre4" form="my_form" placeholder="Artes"/>
                 </td>
                 <td>
-                  <input type="number" name="porcentaje5" form="my_form" />
+                  <input type="number" name="porcentaje4" form="my_form" placeholder="20" value="20"/>
                 </td>
                 <td>
-                  <input type="number" name="cali5" form="my_form" />
+                  <input type="number" name="cali4" form="my_form" placeholder="100" value="100"/>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="text" name="nombre5" form="my_form" placeholder="Historia"/>
+                </td>
+                <td>
+                  <input type="number" name="porcentaje5" form="my_form" placeholder="10" value="10"/>
+                </td>
+                <td>
+                  <input type="number" name="cali5" form="my_form" placeholder="100" value="100"/>
                 </td>
               </tr>
 
           </table>
 
-          <button type="button" form="my_form">Calcular</button>
+          <!-- <button type="button" form="my_form">Calcular</button> -->
 
       </div>
 
@@ -114,11 +114,15 @@ session_start();
               </tr>
               <tr>
                 <td>
-                  <p>
-                    100
-                  </p>
+                <input type="text" name="sum"><br>
                 </td>
                 
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="button" value="Sum" onclick="calcSum()">
+                </td>
               </tr>
 
 
@@ -128,5 +132,25 @@ session_start();
     <?php
       require '../Resources/templates/sidebar-scripts.php';
     ?>
+
+<script>
+    function calcSum() {
+        let porcentaje1 = document.getElementsByName("porcentaje1")[0].value;
+        let porcentaje2 = document.getElementsByName("porcentaje2")[0].value;
+        let porcentaje3 = document.getElementsByName("porcentaje3")[0].value;
+        let porcentaje4 = document.getElementsByName("porcentaje4")[0].value;
+        let porcentaje5 = document.getElementsByName("porcentaje5")[0].value;
+
+        let cali1 = document.getElementsByName("cali1")[0].value;
+        let cali2 = document.getElementsByName("cali2")[0].value;
+        let cali3 = document.getElementsByName("cali3")[0].value;
+        let cali4 = document.getElementsByName("cali4")[0].value;
+        let cali5 = document.getElementsByName("cali5")[0].value;
+
+        let sum = (Number(porcentaje1) * .01 * Number(cali1)) + (Number(porcentaje2) * .01 * Number(cali2)) + (Number(porcentaje3) * .01 * Number(cali3)) + (Number(porcentaje4) * .01 * Number(cali4)) + (Number(porcentaje5) * .01 * Number(cali5));
+        document.getElementsByName("sum")[0].value = sum;
+    }
+</script>
+
 </body>
 </html>
